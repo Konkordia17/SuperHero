@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">SuperHero</string>
+    <string name="title">Заголовок</string>
+    <string name="noInfo">информация о настоящем имени отсутствует</string>
+
+    <string-array name="Universal">
+        <item>Marvel Comics</item>
+        <item>Dark Horse Comics</item>
+        <item>DC Comics</item>
+        <item>NBC - Heroes</item>
+        <item>Sharon Carter</item>
+        <item>Archangel</item>
+        <item>Tempest</item>
+        <item>Image Comics</item>
+        <item>All Universals</item>
+    </string-array>
 </resources>
+

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/infoScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:textSize="30sp"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/fullNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/noInfo"
+                android:textSize="20sp"
+                android:layout_below="@+id/title"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault"/>
+
+            <ImageView
+                android:id="@+id/imageUniversal"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/intelligence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Интеллект:"
+                app:layout_constraintTop_toBottomOf="@id/fullNameTextView"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/intelligenceHero"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/intelligence"
+             app:layout_constraintTop_toBottomOf="@id/fullNameTextView"/>
+            <TextView
+                android:id="@+id/strength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сила:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/intelligence"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/strengthHero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/strength"
+                app:layout_constraintTop_toBottomOf="@id/intelligence"/>
+
+            <TextView
+                android:id="@+id/speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Скорость:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/strength"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/speedHero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/speed"
+                app:layout_constraintTop_toBottomOf="@id/strength"/>
+
+            <TextView
+                android:id="@+id/combat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Количество боев:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/speed"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/combatHero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/combat"
+                app:layout_constraintTop_toBottomOf="@id/speedHero"/>
+
+            <TextView
+                android:id="@+id/birthsPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Место рождения:"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/combat"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/birthsPlaceHero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/birthsPlace"
+                app:layout_constraintTop_toBottomOf="@id/combat"/>
+
+            <TextView
+                android:id="@+id/firstAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Первое появление:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/birthsPlace"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/firstAppearanceHero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstAppearance"/>
+
+            <TextView
+                android:id="@+id/occupation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Место работы:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/firstAppearanceHero"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/occupationHero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/occupation"/>
+
+            <TextView
+                android:id="@+id/relatives"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Родственники:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/occupationHero"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/relativesHero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/relatives"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
