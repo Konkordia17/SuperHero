@@ -1,5 +1,6 @@
-package com.example.superhero
+package com.example.superhero.data.utils
 
+import com.example.superhero.data.model.Hero
 import retrofit2.http.GET
 import retrofit2.http.Path
 

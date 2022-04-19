@@ -1,4 +1,4 @@
-package com.example.superhero
+package com.example.superhero.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.example.superhero.R
+import com.example.superhero.data.utils.Universal
 import com.example.superhero.databinding.FragmentDetailsBinding
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {

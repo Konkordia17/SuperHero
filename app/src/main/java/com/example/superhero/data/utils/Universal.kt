@@ -1,4 +1,4 @@
-package com.example.superhero
+package com.example.superhero.data.utils
 
 enum class Universal(val text: String) {
     MARVEL_COMICS("Marvel Comics"),

@@ -1,4 +1,4 @@
-package com.example.superhero
+package com.example.superhero.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.superhero.R
 import com.example.superhero.databinding.FragmentSuperheroListBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class SuperheroListFragment : Fragment(R.layout.fragment_superhero_list) {
     private lateinit var binding: FragmentSuperheroListBinding
     private val viewModel: SuperheroListViewModel by viewModels()
@@ -54,7 +56,7 @@ class SuperheroListFragment : Fragment(R.layout.fragment_superhero_list) {
     private fun initList() {
         listAdapter = SuperheroAdapter { hero ->
             val action =
-                SuperheroListFragmentDirections.actionSuperheroListFragmentToDetailsFragment2(hero)
+                SuperheroListFragmentDirections.actionSuperheroListFragmentToDetailsFragment(hero)
             findNavController().navigate(action)
         }
         with(binding.superheroList) {

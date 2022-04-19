@@ -6,18 +6,18 @@
 
     <fragment
         android:id="@+id/superheroListFragment"
-        android:name="com.example.superhero.SuperheroListFragment"
+        android:name="com.example.superhero.presentation.SuperheroListFragment"
         android:label="SuperheroListFragment" >
         <action
-            android:id="@+id/action_superheroListFragment_to_detailsFragment2"
-            app:destination="@id/detailsFragment2" />
+            android:id="@+id/action_superheroListFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/detailsFragment2"
-        android:name="com.example.superhero.DetailsFragment"
+        android:id="@+id/detailsFragment"
+        android:name="com.example.superhero.presentation.DetailsFragment"
         android:label="DetailsFragment" >
         <argument
             android:name="hero"
-            app:argType="com.example.superhero.Hero" />
+            app:argType="com.example.superhero.data.model.Hero" />
     </fragment>
 </navigation>

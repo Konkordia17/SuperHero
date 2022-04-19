@@ -1,9 +1,11 @@
-package com.example.superhero
+package com.example.superhero.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.superhero.data.model.Hero
+import com.example.superhero.data.utils.Universal
 import com.example.superhero.databinding.ItemHeroBinding
 
 

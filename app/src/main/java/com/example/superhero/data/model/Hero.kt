@@ -1,4 +1,4 @@
-package com.example.superhero
+package com.example.superhero.data.model
 
 import android.os.Parcelable
 import com.squareup.moshi.Json
