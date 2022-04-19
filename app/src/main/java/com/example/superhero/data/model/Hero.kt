@@ -1,13 +1,18 @@
 package com.example.superhero.data.model
 
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import kotlinx.parcelize.Parcelize
 
+@Entity(tableName = "heroes")
 @Parcelize
 @JsonClass(generateAdapter = true)
 data class Hero(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
     @Json(name = "image")
     val avatar: Image?,
     @Json(name = "name")
